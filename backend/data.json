@@ -1,0 +1,248 @@
+{
+  "purchase": [
+    {
+      "id": 101,
+      "name": "Adam",
+      "email": "adam@gmail.com",
+      "address": "401 street",
+      "items": [
+        {
+          "product": "Power Bank",
+          "price": 2000,
+          "quantity": 1
+        }
+      ],
+      "total": 2000
+    },
+    {
+      "name": "Craig",
+      "email": "naklnshet1@gmail.com",
+      "address": "Mangalore",
+      "items": [
+        {
+          "price": 30000,
+          "product": "Dell Laptop",
+          "quantity": 2
+        },
+        {
+          "price": 45000,
+          "product": "HP Laptop",
+          "quantity": 1
+        },
+        {
+          "price": 50000,
+          "product": "Iphone",
+          "quantity": 1
+        }
+      ],
+      "total": 155000,
+      "id": 102
+    },
+    {
+      "name": "Hank",
+      "email": "",
+      "address": "USA",
+      "items": [
+        {
+          "price": 30000,
+          "product": "Dell Laptop",
+          "quantity": 1
+        },
+        {
+          "price": 45000,
+          "product": "HP Laptop",
+          "quantity": 1
+        }
+      ],
+      "total": 75000,
+      "id": 103
+    },
+    {
+      "name": "Hank",
+      "email": "",
+      "address": "USA",
+      "items": [
+        {
+          "price": 35,
+          "product": "Samosa",
+          "quantity": 1
+        },
+        {
+          "price": 50,
+          "product": "Masala Dosa",
+          "quantity": 1
+        },
+        {
+          "price": 70,
+          "product": "Chole Bhature",
+          "quantity": 1
+        },
+        {
+          "price": 200,
+          "product": "Tandoori Chicken",
+          "quantity": 1
+        }
+      ],
+      "total": 355,
+      "id": 104
+    },
+    {
+      "name": "Nakul",
+      "email": "",
+      "address": "USA",
+      "items": [
+        {
+          "price": 35,
+          "product": "samosa",
+          "quantity": 1
+        },
+        {
+          "price": 50,
+          "product": "masala dosa",
+          "quantity": 2
+        },
+        {
+          "price": 70,
+          "product": "chole bhature",
+          "quantity": 1
+        }
+      ],
+      "total": 205,
+      "id": 105
+    }
+  ],
+  "account": [
+    {
+      "id": 501,
+      "name": "Fring",
+      "username": "fri101",
+      "email": "fring@123",
+      "phone": 1234567890,
+      "profession": "Businessman",
+      "password": "123456",
+      "confirmPassword": "123456"
+    },
+    {
+      "name": "Brad",
+      "username": "brad123",
+      "email": "brad123@gmail.",
+      "phone": "",
+      "profession": "Doctor",
+      "password": "BraD",
+      "confirmPassword": "BraD",
+      "id": 502
+    },
+    {
+      "name": "Craig",
+      "username": "craig123",
+      "email": "craig@",
+      "phone": "",
+      "profession": "Engineer",
+      "password": "CraiG",
+      "confirmPassword": "CraiG",
+      "id": 503
+    },
+    {
+      "name": "Nakul",
+      "username": "nakul123",
+      "email": "",
+      "phone": "",
+      "profession": "Engineer",
+      "password": "N@kuL",
+      "confirmPassword": "N@kuL",
+      "id": 504
+    },
+    {
+      "name": "Mark",
+      "username": "admin",
+      "email": "mark123@gmail.",
+      "phone": "",
+      "profession": "Manager",
+      "password": "AdmiN",
+      "confirmPassword": "AdmiN",
+      "id": 505
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "product_id": "F1001",
+      "product_name": "samosa",
+      "product_img": "https://static.toiimg.com/thumb/61050397.cms?imgsize=246859&width=800&height=800",
+      "product_price": 35,
+      "product_details": "A fried or baked pastry filled with spiced potatoes and peas",
+      "product_quantity": 10,
+      "product_added": false
+    },
+    {
+      "id": 2,
+      "product_id": "F1002",
+      "product_name": "masala dosa",
+      "product_img": "https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__700_0_0_0_auto.jpg",
+      "product_price": 50,
+      "product_details": "A crispy crepe made from fermented rice filled with spiced potato filling",
+      "product_quantity": 10,
+      "product_added": false
+    },
+    {
+      "id": 3,
+      "product_id": "F1003",
+      "product_name": "chole bhature",
+      "product_img": "https://img-global.cpcdn.com/recipes/1d9ce5d3344e6a34/1200x630cq70/photo.jpg",
+      "product_price": 70,
+      "product_details": "A dish consisting of spiced chickpeas and deep-fried bread",
+      "product_quantity": 5,
+      "product_added ": false
+    },
+    {
+      "id": 4,
+      "product_id": "F1004",
+      "product_name": "pav bhaji",
+      "product_img": "https://i0.wp.com/s3.ap-south-1.amazonaws.com/images.salonyscookbook.com/pav-bhaji-recipe/pav-bhaji-recipe13.jpg?w=1200",
+      "product_price": 70,
+      "product_details": "A spicy mashed vegetable curry served with soft bread rolls",
+      "product_quantity": 5,
+      "product_added": false
+    },
+    {
+      "id": 5,
+      "product_id": "F1005",
+      "product_name": "butter chicken",
+      "product_img": "https://leitesculinaria.com/wp-content/uploads/fly-images/346503/butter-chicken-1200x1200-c.jpg",
+      "product_price": 250,
+      "product_details": "A fragrant rice dish with meat and aromatic spices",
+      "product_quantity": 5,
+      "product_added": false
+    },
+    {
+      "id": 6,
+      "product_id": "F1006",
+      "product_name": "tandoori chicken",
+      "product_img": "https://www.seema.com/wp-content/uploads/2021/08/shutterstock_1199926645-scaled.jpg",
+      "product_price": 200,
+      "product_details": "Marinated chicken cooked in a clay oven and roasted with butter",
+      "product_quantity": 5,
+      "product_added": false
+    },
+    {
+      "product_id": "F1007",
+      "product_name": "chicken fried rice",
+      "product_img": "https://www.indianhealthyrecipes.com/wp-content/uploads/2020/12/fried-rice.jpg",
+      "product_price": 150,
+      "product_details": "Fried rice recipe - Restaurant style easy Chinese vegetable fried rice.",
+      "product_quantity": 10,
+      "product_added": false,
+      "id": 7
+    },
+    {
+      "product_id": "F1008",
+      "product_name": "pasta",
+      "product_img": "https://www.sharmispassions.com/wp-content/uploads/2012/12/FusilliPasta8-500x375.jpg",
+      "product_price": 200,
+      "product_details": "spiral type pasta cooked with or without sauce to make a great delicious meal",
+      "product_quantity": 21,
+      "product_added": false,
+      "id": 8
+    }
+  ]
+}

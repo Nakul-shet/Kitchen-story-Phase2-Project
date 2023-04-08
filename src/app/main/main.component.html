@@ -1,0 +1,53 @@
+<header class="d-flex align-items-center py-3 mb-4 border-bottom">
+  <!-- flex-wrap align-items-center justify-content-center justify-content-md-between -->
+    <a routerLink="landing" class="navbar-brand">
+        <img src="https://cdn-icons-png.flaticon.com/512/2607/2607254.png" width="50px"/>
+        <h3> Kitchen Story</h3>
+    </a>
+
+    <ul *ngIf="isLogin() == true" class="nav">
+      <li><a routerLink="home" routerLinkActive="active" class="nav-link px-2">Home</a></li>
+      <li><a routerLink="products" routerLinkActive="active" class="nav-link px-2">Menu</a></li>
+
+      <li *ngIf="getUserName() == true"><a routerLink="add-item" class="nav-link px-2">Add Items</a></li>
+
+      <li *ngIf="isAdmin() != true">
+        <a routerLink="cart" type="button" class="btn position-relative cart-icon">
+          <img width="30px" src="https://cdn-icons-png.flaticon.com/512/2203/2203239.png"/>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{cartLength}}
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </a>  
+      </li>
+
+    </ul>
+
+    <div *ngIf="isLogin() != true" class="col-md-3 entry text-end">
+      <a routerLink="login" type="button" class="btn btn-outline-dark me-2">Login</a>
+      <a routerLink="signup" type="button" class="btn btn-dark">Sign-up</a>
+    </div>
+
+    <div *ngIf="isLogin() == true" class="col-md-3 entry account text-end">
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          {{accountName | uppercase}}
+        </button>
+        <ul class="dropdown-menu">
+          <li><a routerLink="profile" class="dropdown-item">Profile</a></li>
+          <li><a class="dropdown-item">Track Order</a></li>
+          <li><a class="dropdown-item">Settings</a></li>
+          <li><a (click)="logout()" class="dropdown-item btn bg-danger text-white" href="#">Logout</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+</header>
+
+<div class="p-1 mb-4 bg-body-tertiary rounded-3">
+    <div class="container py-5">
+      <router-outlet></router-outlet>
+    </div>
+</div>

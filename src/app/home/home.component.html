@@ -1,0 +1,64 @@
+<div class="container search-container">
+    <!-- <div class="col-lg-6">
+        <h2>Welcome to the Home Page</h2>
+        <br/>
+        <button class="btn btn-md bg-danger text-white" (click)="logout()">Logout</button>
+        <button class="btn btn-md bg-danger text-white" (click)="deleteAccount()">Delete Account</button>
+    </div> -->
+        <img width="100px" src="https://cdn-icons-png.flaticon.com/512/1830/1830839.png"/>
+        <h2>Discover and Order your Favorite Food</h2>
+        <form>
+            <div class="form-group inputs">
+                <input type="search" class="form-control" name="searchitem" [(ngModel)]="searchItem" autofocus/>
+                <button class="btn btn-md btn-danger" (click)="handleSearch()">
+                    Search
+                </button>
+            </div>
+        </form>
+</div>
+<br/>
+<div *ngIf="searchResult.length >= 1">
+    <h3>Search Results For : {{searchItem | uppercase}}</h3>
+    <div class="album py-2 bg-body-tertiary">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div *ngFor="let p of searchResult" class="col">
+                    <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="250" src={{p.product_img}}  role="img" aria-label="Placeholder: Thumbnail" >
+                    <div class="card-body">
+                        <h3>{{p.product_name | uppercase}}</h3>
+                        <p>{{p.product_price | currency : "INR"}}</p>
+                        <p class="card-text">{{p.product_details}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <!-- <div *ngIf="isAdmin() != true && p.product_quantity > 0" class="btn-group">
+                            <button class="btn btn-light" (click)="viewDetails(p)">View</button>
+                            <button class="btn btn-warning" (click)="addToCart(p)">Add To Cart</button>
+                        </div> -->
+                        <div *ngIf="isAdmin() != true" class="btn-group">
+                            <!-- <button class="btn btn-light" (click)="viewDetails(p)">View</button> -->
+                            <button class="btn btn-warning" (click)="addToCart(p)">Add To Cart</button>
+                        </div>
+                        <div *ngIf="p.product_quantity > 0">
+                            <small style="color : green">Available</small>
+                        </div>
+                        <div *ngIf="p.product_quantity == 0">
+                            <small style="color : red">Not Available</small>
+                        </div>
+                        
+                        </div>
+                        <br/>
+                        <div *ngIf="p.product_added === true">
+                            <p class="added">Item Added to the Cart</p>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="noneMessage != ''">
+    <h2 style="color : red">{{noneMessage}}</h2>
+</div>

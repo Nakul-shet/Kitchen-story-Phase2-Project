@@ -1,0 +1,10 @@
+{
+    "/purchase/create" : "/purchase",
+    "/purchase/list" : "/purchase",
+
+    "/account/create" : "/account",
+    "/account/get/:id" : "/account/:id",
+    "/account/list" : "/account",
+
+    "/products/list" : "/products" 
+}

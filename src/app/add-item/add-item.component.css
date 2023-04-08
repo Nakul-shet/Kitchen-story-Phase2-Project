@@ -1,0 +1,10 @@
+h3.title{
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 0px 350px;
+    margin-bottom: 20px;
+    border : 7px double white;
+    border-radius: 10px;
+    color: white;
+}

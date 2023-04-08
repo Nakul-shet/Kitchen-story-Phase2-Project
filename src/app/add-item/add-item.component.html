@@ -1,0 +1,52 @@
+<h3 class="title">Add New Food Item</h3>
+<br/>
+<div class="container">
+    <form (ngSubmit)="handleSubmit()">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" [(ngModel)]="addFoodProduct.name" class="form-control" placeholder="Enter Food item Name" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Image</label>
+                    <input type="text" name="image" [(ngModel)]="addFoodProduct.image" class="form-control" placeholder="Paste the URL of the food item" autocomplete="off"/>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="number" name="price" [(ngModel)]="addFoodProduct.price" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="number" name="Quantity" [(ngModel)]="addFoodProduct.quantity" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Product Details</label>
+                    <input type="text" name="details" [(ngModel)]="addFoodProduct.details" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Custom ID</label>
+                    <input type="text" name="custom" [(ngModel)]="addFoodProduct.customID" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-md bg-danger text-white">Add Food Item</button>
+    </form>
+</div>

@@ -1,0 +1,56 @@
+button{
+    margin: 0px 10px;
+}
+
+input{
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.container.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: auto;
+    /* background-color: black; */
+    color: white;
+
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    padding: 50px;
+
+    /* background: #c31432; 
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+    background: linear-gradient(to right, #240b36, #c31432);  */
+
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+img{
+    transition: transform 0.2s ease-in;
+    margin-bottom: 15px;
+}
+
+img:hover{
+    transform: scale(0.9);
+}
+
+.card{
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+}
+
+/* .inputs{
+    display: flex;
+} */

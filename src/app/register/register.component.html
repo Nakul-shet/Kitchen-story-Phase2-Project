@@ -1,0 +1,90 @@
+<main class="form-signin w-100 m-auto">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+        <img src="https://cdn-icons-png.flaticon.com/512/2607/2607254.png" width="50px"/>
+        <br/>
+        <br/>
+      <h1 class="h3 mb-3 fw-normal">Registration Form</h1>
+  
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="registrationObj.name" name="name" formControlName="name" placeholder="Enter your Name" required>
+        <div *ngIf="submitted && f['name'].errors">
+            <div class="text-danger" *ngIf="f['name'].errors['required']">
+                Full Name is required
+            </div>
+        </div>
+      </div>
+      <br/>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="registrationObj.username" name="username" formControlName="username"  placeholder="Enter you username" required>
+        <div *ngIf="submitted && f['username'].errors">
+            <div class="text-danger" *ngIf="f['username'].errors['required']">
+                Username is required
+            </div>
+        </div>
+      </div>
+      <br/>
+
+      <div class="form-group">
+        <input type="email" class="form-control" [(ngModel)]="registrationObj.email" name="email" formControlName="email" placeholder="Enter your email" required email> 
+        <div *ngIf="submitted && f['email'].errors">
+            <div class="text-danger" *ngIf="f['email'].errors['required']">
+                Email is required
+            </div>
+            <div class="text-danger" *ngIf="f['email'].errors['email']">
+                Enter Valid Email Address
+            </div>
+        </div>
+      </div>
+      <br/>
+
+      <div class="form-group">
+        <input type="number" class="form-control" [(ngModel)]="registrationObj.phone" name="phone" formControlName="phone" placeholder="Enter your phone" required minlength="10" maxlength="12"> 
+        <div *ngIf="submitted && f['phone'].errors">
+            <div class="text-danger" *ngIf="f['phone'].errors['required']">
+                Phone Number is required
+            </div>
+            <div class="text-danger" *ngIf="f['phone'].errors['minlength']">
+                Phone number should be minimum of 10 Numbers
+            </div>
+            <div class="text-danger" *ngIf="f['phone'].errors['maxlength']">
+                Phone number should be Maximum of 12 Numbers
+            </div>
+        </div>
+      </div>
+      <br/>
+
+      <div class="form-group">
+        <input type="email" class="form-control" [(ngModel)]="registrationObj.profession" name="profession" formControlName="profession" placeholder="Enter your Profession" required> 
+        <div *ngIf="submitted && f['profession'].errors">
+            <div class="text-danger" *ngIf="f['profession'].errors['required']">
+                Profession is required
+            </div>
+        </div>
+      </div>
+      <br/>
+
+      <div class="form-group">
+        <input type="password" class="form-control" [(ngModel)]="registrationObj.password" name="password" formControlName="password" placeholder="Enter your password" minlength="6" required>
+        <div *ngIf="submitted && f['password'].errors">
+            <div class="text-danger" *ngIf="f['password'].errors['required']">
+                Password is required
+            </div>
+            <div class="text-danger" *ngIf="f['password'].errors['minlength']">
+                Minimum of 6 Characters
+            </div>
+        </div>
+      </div>
+      <br/>
+      <div class="form-group">
+        <input type="password" class="form-control" [(ngModel)]="registrationObj.confirmPassword" name="confirmPassword" formControlName="confirmPassword" placeholder="confirm Password" required>
+        <div *ngIf="submitted && f['confirmPassword'].errors">
+            <div class="text-danger" *ngIf="f['confirmPassword'].errors['required']">
+                Confirm Your Password
+            </div>
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    </form>
+</main>
+

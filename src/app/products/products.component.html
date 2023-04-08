@@ -1,0 +1,43 @@
+<h3 class="title">Food Menu</h3>
+
+<div class="album py-2 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div *ngFor="let p of products" class="col">
+                <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="250" src={{p.product_img}}  role="img" aria-label="Placeholder: Thumbnail" >
+                <div class="card-body">
+                    <h3>{{p.product_name | uppercase}}</h3>
+                    <p>{{p.product_price | currency : "INR"}}</p>
+                    <p class="card-text">{{p.product_details}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div *ngIf="isAdmin() != true && p.product_quantity > 0" class="btn-group">
+                        <button class="btn btn-light" (click)="viewDetails(p)">View</button>
+                        <button class="btn btn-warning" (click)="addToCart(p)">Add To Cart</button>
+                    </div>
+                    <div *ngIf="p.product_quantity > 0">
+                        <small style="color : green">Available</small>
+                    </div>
+                    <div *ngIf="p.product_quantity == 0">
+                        <small style="color : red">Not Available</small>
+                    </div>
+                    
+                    </div>
+                    <br/>
+                    <div *ngIf="p.product_added === true">
+                        <p class="added">Item Added to the Cart</p>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="modal-bg">
+    <div class="custom-modal">
+        <button (click)="handleStyleChange()">Close</button>
+        <h1>Welcome</h1>
+    </div>
+</div> -->
